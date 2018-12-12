@@ -81,7 +81,20 @@ namespace Linkedlists_algorithim
 
             //this is for part 2// counts the occurences of numbers in an array.
             int[] numbers = new int[] { 1, 1, 1, 2, 4, 7, 7, 8, 9, 5 };
-            
+            int[] count = new int[10];
+
+            for (int x = 0; x < 10; x++)
+            {
+                for (int y = 0; y < numbers.Length; y++)
+                {
+                    if (numbers[y] == x)
+                    {
+                        count[x]++;
+                    }
+                }
+            }
+            for (int x = 0; x < 10; x++)
+            Console.WriteLine("Number " + x + " appears " + count[x] + " times");
 
             Console.ReadKey();
         }
